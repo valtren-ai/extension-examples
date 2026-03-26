@@ -33,6 +33,10 @@ For a Node extension:
 npm install @valtren-ai/extension-sdk@^0.1.0
 ```
 
+The SDK is published on npm here:
+
+- [npmjs.com/package/@valtren-ai/extension-sdk](https://www.npmjs.com/package/@valtren-ai/extension-sdk)
+
 ## Step 4: define your extension manifest
 
 Use the SDK helpers:
@@ -117,3 +121,8 @@ Before publishing:
 - validate your manifest with the SDK
 - include screenshots or expected output
 - keep examples small and focused
+
+If you want examples of published SDK usage, see:
+
+- `examples/node/catalog-only-agent-pack`
+- `examples/node/executor-pack-node`
