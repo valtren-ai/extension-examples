@@ -1,5 +1,10 @@
+import {
+  defineExtension,
+  ensureValidExtensionManifest,
+} from "@valtren-ai/extension-sdk";
+
 export function registerExtension() {
-  return {
+  return ensureValidExtensionManifest(defineExtension({
     name: "catalog-only-agent-pack",
     version: "1.0.0",
     description: "Catalog-only example pack for Valtren AI workflows and templates.",
@@ -67,5 +72,5 @@ export function registerExtension() {
         },
       ],
     },
-  };
+  }));
 }

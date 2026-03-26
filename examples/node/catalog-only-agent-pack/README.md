@@ -10,6 +10,16 @@ Catalog-only Valtren AI extension example.
 
 This pack does not add a custom executor. It is useful when you want to publish reusable workflow definitions and starter templates while still relying on core runtime behavior.
 
+## SDK usage
+
+This example is intended to use:
+
+```js
+import { defineExtension, ensureValidExtensionManifest } from "@valtren-ai/extension-sdk";
+```
+
+That keeps the manifest shape explicit and validated without making authors hand-roll the structure.
+
 ## Install
 
 Copy this folder into:
