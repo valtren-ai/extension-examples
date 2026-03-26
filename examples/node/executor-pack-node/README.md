@@ -10,6 +10,16 @@ Executor-backed Valtren AI extension example.
 
 This is the best reference when you want to add domain-specific logic without changing Valtren AI core runtime code.
 
+## SDK usage
+
+This example is intended to use:
+
+```js
+import { defineExtension, ensureValidExtensionManifest } from "@valtren-ai/extension-sdk";
+```
+
+That keeps extension authors from hand-rolling manifest shape validation.
+
 ## Install
 
 Copy this folder into:

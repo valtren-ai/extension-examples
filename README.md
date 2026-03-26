@@ -97,6 +97,10 @@ Deploy your service separately, then register it through the Valtren AI sidecar 
 3. Then study `examples/node/executor-pack-node`
 4. If your team uses Python, review `examples/python/hello-world-sidecar-python`
 
+## Guides
+
+- [Build your first extension](./docs/build-your-first-extension.md)
+
 ## Related repositories
 
 - `valtren-ai/core`

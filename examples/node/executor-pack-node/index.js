@@ -1,3 +1,8 @@
+import {
+  defineExtension,
+  ensureValidExtensionManifest,
+} from "@valtren-ai/extension-sdk";
+
 function buildDiagnosis(agent) {
   const scope = agent && agent.scope && typeof agent.scope === "object" ? agent.scope : {};
   const ownerRole = String(scope.owner_role || "Operations Lead");
@@ -23,7 +28,7 @@ function buildDiagnosis(agent) {
 }
 
 export function registerExtension() {
-  return {
+  return ensureValidExtensionManifest(defineExtension({
     name: "executor-pack-node",
     version: "1.0.0",
     description: "Node executor example for Valtren AI extension authors.",
@@ -119,5 +124,5 @@ export function registerExtension() {
         },
       },
     ],
-  };
+  }));
 }

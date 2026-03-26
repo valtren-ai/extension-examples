@@ -1,0 +1,8 @@
+{
+  "name": "executor-pack-node-example",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@valtren-ai/extension-sdk": "^0.1.0"
+  }
+}
