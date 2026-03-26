@@ -74,6 +74,12 @@ Extensions contribute:
 
 ## Typical install paths
 
+For SDK-backed examples, install the shared package first:
+
+```bash
+npm install @valtren-ai/extension-sdk@^0.1.0
+```
+
 ### Node extension
 
 Install under the Valtren AI runtime discovery directory:
