@@ -30,8 +30,16 @@ examples/
     hello-world-node/
     catalog-only-agent-pack/
     executor-pack-node/
+    approval-gate-pack/
   python/
     hello-world-sidecar-python/
+    listing-audit-sidecar-python/
+  java/
+    hello-world-sidecar-java/
+    approval-review-sidecar-java/
+  dotnet/
+    hello-world-sidecar-dotnet/
+    listing-ops-sidecar-dotnet/
 ```
 
 ## Included examples
@@ -53,12 +61,40 @@ examples/
   - Adds an extension-native step that produces workflow state
   - Best reference for runtime execution
 
+- `approval-gate-pack`
+  - Medium-complexity in-process extension
+  - Demonstrates a governed workflow plus an approval-aware executor
+  - Good bridge from toy sample to real runtime behavior
+
 ### Python
 
 - `hello-world-sidecar-python`
   - Minimal sidecar for the Valtren extension control plane
   - Demonstrates `/health` and `/hooks/{hookName}`
   - Best first polyglot example
+
+- `listing-audit-sidecar-python`
+  - Medium-complexity sidecar example
+  - Demonstrates a domain endpoint and simple listing-health scoring
+
+### Java
+
+- `hello-world-sidecar-java`
+  - Simple Spring Boot sidecar example
+  - Good first JVM-side extension sample
+
+- `approval-review-sidecar-java`
+  - Medium-complexity Java sidecar
+  - Demonstrates an approval-review domain endpoint
+
+### .NET
+
+- `hello-world-sidecar-dotnet`
+  - Simple ASP.NET Core sidecar example
+
+- `listing-ops-sidecar-dotnet`
+  - Medium-complexity .NET sidecar
+  - Demonstrates a domain endpoint and lightweight listing recommendations
 
 ## How extensions fit into Valtren AI
 
@@ -112,7 +148,9 @@ Deploy your service separately, then register it through the Valtren AI sidecar 
 1. Start with `examples/node/hello-world-node`
 2. Move to `examples/node/catalog-only-agent-pack`
 3. Then study `examples/node/executor-pack-node`
-4. If your team uses Python, review `examples/python/hello-world-sidecar-python`
+4. Review `examples/node/approval-gate-pack`
+5. Move into sidecars with `examples/python/hello-world-sidecar-python`
+6. Pick the medium example in your preferred language: Python, Java, or .NET
 
 ## Guides
 
