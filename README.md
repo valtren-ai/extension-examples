@@ -62,6 +62,7 @@ examples/
     hello-world-node/
     org-hello-world-zip-node/
     org-credit-ops-zip-node/
+    org-claims-triage-zip-node/
     catalog-only-agent-pack/
     executor-pack-node/
     approval-gate-pack/
@@ -71,6 +72,7 @@ examples/
     hello-world-sidecar-python/
     org-hello-world-zip-python/
     org-collections-zip-python/
+    org-telecom-retention-zip-python/
     listing-audit-sidecar-python/
     rolling-mill-quality-sidecar-python/
     loan-portfolio-risk-sidecar-python/
@@ -95,8 +97,10 @@ examples/
 | Build your first Valtren extension ever | `examples/node/hello-world-node` | Smallest in-process example |
 | Upload a Node extension from Org Settings | `examples/node/org-hello-world-zip-node` | Best first org ZIP Node example |
 | Start a banking or credit-ops Node proof of concept | `examples/node/org-credit-ops-zip-node` | Customer-owned org ZIP for credit review flows |
+| Start an insurance claims proof of concept | `examples/node/org-claims-triage-zip-node` | Customer-owned org ZIP for claims triage |
 | Upload a Python extension from Org Settings | `examples/python/org-hello-world-zip-python` | Best first org ZIP Python example |
 | Start a collections-focused Python proof of concept | `examples/python/org-collections-zip-python` | Customer-owned org ZIP for simple collections routing |
+| Start a telecom retention proof of concept | `examples/python/org-telecom-retention-zip-python` | Customer-owned org ZIP for churn and renewal routing |
 | Add workflows and templates only | `examples/node/catalog-only-agent-pack` | No executor complexity yet |
 | Add a Node step executor | `examples/node/executor-pack-node` | Best runtime execution example |
 | Learn a medium Node pack | `examples/node/approval-gate-pack` | Shows governed workflow behavior |
@@ -154,6 +158,22 @@ These are intentionally shaped around credit operations, collections, and servic
   - org ZIP example for collections lane routing
   - good for servicing and recovery teams
 
+## Insurance / telecom org ZIP examples
+
+These are intentionally shaped around customer-owned proof-of-concept workflows for insurers and telecom operators that want to move quickly through org ZIP installation.
+
+### Node
+
+- `examples/node/org-claims-triage-zip-node`
+  - org ZIP example for insurance claims triage
+  - good for manual-review and exception-routing workflows
+
+### Python
+
+- `examples/python/org-telecom-retention-zip-python`
+  - org ZIP example for telecom renewal and churn-retention routing
+  - good for save-desk and renewal-priority workflows
+
 ## Micro-finance-focused examples
 
 These are intentionally shaped around digital lending, borrower operations, and financial-inclusion scenarios so teams like Yabx or Furaha Financials can see how Valtren AI extensions map to real work.
@@ -198,6 +218,10 @@ These are intentionally shaped around digital lending, borrower operations, and 
   - Banking-focused Node org ZIP example
   - Demonstrates a customer-owned credit-review proof of concept
 
+- `org-claims-triage-zip-node`
+  - Insurance-focused Node org ZIP example
+  - Demonstrates simple claims triage for customer-owned proof-of-concept flows
+
 - `catalog-only-agent-pack`
   - Demonstrates `agent_catalog`
   - Adds custom steps, workflows, and starter templates
@@ -232,6 +256,10 @@ These are intentionally shaped around digital lending, borrower operations, and 
 - `org-collections-zip-python`
   - Banking-focused Python org ZIP example
   - Demonstrates simple collections routing for customer-owned proof-of-concept flows
+
+- `org-telecom-retention-zip-python`
+  - Telecom-focused Python org ZIP example
+  - Demonstrates simple retention routing for customer-owned proof-of-concept flows
 
 - `listing-audit-sidecar-python`
   - Medium-complexity Python sidecar
