@@ -33,6 +33,7 @@ examples/
     approval-gate-pack/
   python/
     hello-world-sidecar-python/
+    org-hello-world-zip-python/
     listing-audit-sidecar-python/
   java/
     hello-world-sidecar-java/
@@ -41,6 +42,20 @@ examples/
     hello-world-sidecar-dotnet/
     listing-ops-sidecar-dotnet/
 ```
+
+## Which example should I start with?
+
+| Goal | Best example |
+| --- | --- |
+| First ever Valtren extension | `examples/node/hello-world-node` |
+| Add workflows/templates only | `examples/node/catalog-only-agent-pack` |
+| Add a Node executor | `examples/node/executor-pack-node` |
+| Learn a medium Node example | `examples/node/approval-gate-pack` |
+| Test org ZIP upload for Python | `examples/python/org-hello-world-zip-python` |
+| Build a Python sidecar service | `examples/python/hello-world-sidecar-python` |
+| Build a medium Python sidecar | `examples/python/listing-audit-sidecar-python` |
+| Start with Java | `examples/java/hello-world-sidecar-java` |
+| Start with .NET | `examples/dotnet/hello-world-sidecar-dotnet` |
 
 ## Included examples
 
@@ -72,6 +87,10 @@ examples/
   - Minimal sidecar for the Valtren extension control plane
   - Demonstrates `/health` and `/hooks/{hookName}`
   - Best first polyglot example
+
+- `org-hello-world-zip-python`
+  - Minimal Python example shaped for `Org Settings -> Extensions -> Upload ZIP`
+  - Best first example for org-level Python ZIP enablement
 
 - `listing-audit-sidecar-python`
   - Medium-complexity sidecar example
@@ -143,14 +162,24 @@ Then reload extensions from:
 
 Deploy your service separately, then register it through the Valtren AI sidecar runtime config.
 
+### Org Python ZIP extension
+
+For the new org upload flow, start with:
+
+- `examples/python/org-hello-world-zip-python`
+
+Then zip the folder contents and upload from:
+
+`Admin -> Org Settings -> Extensions`
+
 ## Recommended learning path
 
 1. Start with `examples/node/hello-world-node`
 2. Move to `examples/node/catalog-only-agent-pack`
 3. Then study `examples/node/executor-pack-node`
 4. Review `examples/node/approval-gate-pack`
-5. Move into sidecars with `examples/python/hello-world-sidecar-python`
-6. Pick the medium example in your preferred language: Python, Java, or .NET
+5. If you want the org ZIP upload flow, try `examples/python/org-hello-world-zip-python`
+6. Then move into Python, Java, or .NET sidecars for domain logic
 
 ## Guides
 
