@@ -285,6 +285,7 @@ Typical flow:
 ## Guides
 
 - [Build your first extension](./docs/build-your-first-extension.md)
+- [Manufacturing extension playbook](./docs/manufacturing-playbook.md)
 
 ## Related repositories
 
