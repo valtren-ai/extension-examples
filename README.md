@@ -3,24 +3,56 @@
 [![npm version](https://img.shields.io/npm/v/%40valtren-ai%2Fextension-sdk)](https://www.npmjs.com/package/@valtren-ai/extension-sdk)
 [![Publish SDK](https://github.com/valtren-ai/extension-sdk/actions/workflows/publish.yml/badge.svg)](https://github.com/valtren-ai/extension-sdk/actions/workflows/publish.yml)
 
-Official sample extensions for Valtren AI, from hello world to advanced domain packs.
+Official sample extensions for Valtren AI, from hello world to medium-complexity domain packs.
 
 Published SDK:
 
 - [`@valtren-ai/extension-sdk@0.1.0`](https://www.npmjs.com/package/@valtren-ai/extension-sdk)
 
-## What this repo is for
+## Why this repo exists
 
-This repository helps extension authors learn how to build on top of the Valtren AI core platform without modifying core runtime code.
+This repository helps extension authors learn how to build on top of Valtren AI without modifying the core runtime.
 
-It demonstrates two extension models:
+It is designed for three kinds of teams:
 
-- In-process Node extensions
-- Polyglot sidecar extensions
+- platform teams building in-process Node extensions
+- product teams shipping org-owned ZIP extensions
+- domain teams that prefer sidecars in Python, Java, or .NET
 
-Use the Node examples when you want the simplest authoring model and close integration with the platform runtime.
+## Extension models in plain language
 
-Use the sidecar examples when your team prefers Python, Java, or .NET, or when you want stronger execution isolation for custom domain logic.
+### 1. In-process Node extensions
+
+Use these when you want the easiest authoring path and tight integration with the Valtren runtime.
+
+Best for:
+
+- custom steps and executors
+- starter templates and workflow packs
+- platform-installed extensions
+- org-installed Node ZIP extensions
+
+### 2. Org ZIP extensions
+
+Use these when an organization wants to upload and own its extension package directly from the Valtren UI.
+
+Best for:
+
+- self-contained Node ZIP packages
+- self-contained Python ZIP packages
+- customer-owned extension IP
+- quick proof-of-concept extensions
+
+### 3. Polyglot sidecars
+
+Use these when your team prefers Python, Java, or .NET, or when you want runtime isolation for domain logic.
+
+Best for:
+
+- enterprise integration logic
+- scoring and optimization services
+- ML or analytics endpoints
+- approval or review services
 
 ## Repository layout
 
@@ -28,6 +60,7 @@ Use the sidecar examples when your team prefers Python, Java, or .NET, or when y
 examples/
   node/
     hello-world-node/
+    org-hello-world-zip-node/
     catalog-only-agent-pack/
     executor-pack-node/
     approval-gate-pack/
@@ -38,33 +71,41 @@ examples/
   java/
     hello-world-sidecar-java/
     approval-review-sidecar-java/
+    listing-health-sidecar-java/
   dotnet/
     hello-world-sidecar-dotnet/
     listing-ops-sidecar-dotnet/
+    approval-review-sidecar-dotnet/
 ```
 
 ## Which example should I start with?
 
-| Goal | Best example |
-| --- | --- |
-| First ever Valtren extension | `examples/node/hello-world-node` |
-| Add workflows/templates only | `examples/node/catalog-only-agent-pack` |
-| Add a Node executor | `examples/node/executor-pack-node` |
-| Learn a medium Node example | `examples/node/approval-gate-pack` |
-| Test org ZIP upload for Python | `examples/python/org-hello-world-zip-python` |
-| Build a Python sidecar service | `examples/python/hello-world-sidecar-python` |
-| Build a medium Python sidecar | `examples/python/listing-audit-sidecar-python` |
-| Start with Java | `examples/java/hello-world-sidecar-java` |
-| Start with .NET | `examples/dotnet/hello-world-sidecar-dotnet` |
+| If you want to... | Start here | Why |
+| --- | --- | --- |
+| Build your first Valtren extension ever | `examples/node/hello-world-node` | Smallest in-process example |
+| Upload a Node extension from Org Settings | `examples/node/org-hello-world-zip-node` | Best first org ZIP Node example |
+| Upload a Python extension from Org Settings | `examples/python/org-hello-world-zip-python` | Best first org ZIP Python example |
+| Add workflows and templates only | `examples/node/catalog-only-agent-pack` | No executor complexity yet |
+| Add a Node step executor | `examples/node/executor-pack-node` | Best runtime execution example |
+| Learn a medium Node pack | `examples/node/approval-gate-pack` | Shows governed workflow behavior |
+| Build a minimal Python sidecar | `examples/python/hello-world-sidecar-python` | Smallest polyglot path |
+| Build a medium Python sidecar | `examples/python/listing-audit-sidecar-python` | Domain scoring example |
+| Start with Java | `examples/java/hello-world-sidecar-java` | Smallest JVM example |
+| Build a medium Java sidecar | `examples/java/listing-health-sidecar-java` | Useful domain scoring example |
+| Start with .NET | `examples/dotnet/hello-world-sidecar-dotnet` | Smallest ASP.NET Core example |
+| Build a medium .NET sidecar | `examples/dotnet/approval-review-sidecar-dotnet` | Useful approval-routing example |
 
 ## Included examples
 
-### Node
+### Node examples
 
 - `hello-world-node`
-  - Minimal extension package
-  - Demonstrates `registerExtension(...)`
-  - Best first example
+  - Minimal in-process extension
+  - Demonstrates manifest shape and route registration
+
+- `org-hello-world-zip-node`
+  - Minimal Node example shaped for `Admin -> Org Settings -> Extensions -> Upload ZIP`
+  - Demonstrates the org-owned ZIP upload path for Node
 
 - `catalog-only-agent-pack`
   - Demonstrates `agent_catalog`
@@ -74,48 +115,48 @@ examples/
 - `executor-pack-node`
   - Demonstrates `step_executors`
   - Adds an extension-native step that produces workflow state
-  - Best reference for runtime execution
 
 - `approval-gate-pack`
   - Medium-complexity in-process extension
   - Demonstrates a governed workflow plus an approval-aware executor
-  - Good bridge from toy sample to real runtime behavior
 
-### Python
+### Python examples
 
 - `hello-world-sidecar-python`
-  - Minimal sidecar for the Valtren extension control plane
+  - Minimal Python sidecar
   - Demonstrates `/health` and `/hooks/{hookName}`
-  - Best first polyglot example
 
 - `org-hello-world-zip-python`
-  - Minimal Python example shaped for `Org Settings -> Extensions -> Upload ZIP`
-  - Best first example for org-level Python ZIP enablement
+  - Minimal Python example shaped for org ZIP upload
+  - Best first example for org-level Python enablement
 
 - `listing-audit-sidecar-python`
-  - Medium-complexity sidecar example
+  - Medium-complexity Python sidecar
   - Demonstrates a domain endpoint and simple listing-health scoring
 
-### Java
+### Java examples
 
 - `hello-world-sidecar-java`
-  - Simple Spring Boot sidecar example
-  - Good first JVM-side extension sample
+  - Minimal Spring Boot sidecar
 
 - `approval-review-sidecar-java`
-  - Medium-complexity Java sidecar
-  - Demonstrates an approval-review domain endpoint
+  - Medium Java sidecar for approval-oriented logic
 
-### .NET
+- `listing-health-sidecar-java`
+  - Medium Java sidecar for scoring or QA-style listing analysis
+
+### .NET examples
 
 - `hello-world-sidecar-dotnet`
-  - Simple ASP.NET Core sidecar example
+  - Minimal ASP.NET Core sidecar
 
 - `listing-ops-sidecar-dotnet`
-  - Medium-complexity .NET sidecar
-  - Demonstrates a domain endpoint and lightweight listing recommendations
+  - Medium .NET sidecar for listing recommendations
 
-## How extensions fit into Valtren AI
+- `approval-review-sidecar-dotnet`
+  - Medium .NET sidecar for approval-routing decisions
+
+## How these examples fit into Valtren AI
 
 Valtren AI core owns:
 
@@ -134,9 +175,9 @@ Extensions contribute:
 - custom executor logic
 - sidecar logic in external runtimes
 
-## Typical install paths
+## Install paths
 
-For SDK-backed examples, install the shared package first:
+For SDK-backed Node examples, install the shared package first:
 
 ```bash
 npm install @valtren-ai/extension-sdk@^0.1.0
@@ -146,40 +187,50 @@ The package is live on npm:
 
 - [npmjs.com/package/@valtren-ai/extension-sdk](https://www.npmjs.com/package/@valtren-ai/extension-sdk)
 
-### Node extension
+### Platform-installed Node extensions
 
-Install under the Valtren AI runtime discovery directory:
+Use this path for in-process runtime extensions:
 
 ```text
 server/extensions/<extension-name>/index.js
 ```
 
-Then reload extensions from:
+Then reload from:
 
 `Admin -> Platform -> Extensions -> Reload Extensions`
 
-### Sidecar extension
+### Org ZIP extensions
 
-Deploy your service separately, then register it through the Valtren AI sidecar runtime config.
+Use this path when an org admin uploads the extension package from the UI.
 
-### Org Python ZIP extension
+Current best starting points:
 
-For the new org upload flow, start with:
-
+- `examples/node/org-hello-world-zip-node`
 - `examples/python/org-hello-world-zip-python`
 
-Then zip the folder contents and upload from:
+Then upload from:
 
 `Admin -> Org Settings -> Extensions`
+
+### Sidecar extensions
+
+Use this path when your service runs outside the Valtren core runtime.
+
+Typical flow:
+
+1. run the sidecar locally or deploy it
+2. expose `/health`
+3. expose one or more domain endpoints
+4. register or connect it through Valtren sidecar runtime configuration
 
 ## Recommended learning path
 
 1. Start with `examples/node/hello-world-node`
-2. Move to `examples/node/catalog-only-agent-pack`
-3. Then study `examples/node/executor-pack-node`
-4. Review `examples/node/approval-gate-pack`
-5. If you want the org ZIP upload flow, try `examples/python/org-hello-world-zip-python`
-6. Then move into Python, Java, or .NET sidecars for domain logic
+2. If you want org-owned upload, try `examples/node/org-hello-world-zip-node` or `examples/python/org-hello-world-zip-python`
+3. Move to `examples/node/catalog-only-agent-pack`
+4. Then study `examples/node/executor-pack-node`
+5. Review `examples/node/approval-gate-pack`
+6. Move into Python, Java, or .NET sidecars for domain-specific logic
 
 ## Guides
 
