@@ -64,18 +64,22 @@ examples/
     catalog-only-agent-pack/
     executor-pack-node/
     approval-gate-pack/
+    steel-plant-ops-pack/
   python/
     hello-world-sidecar-python/
     org-hello-world-zip-python/
     listing-audit-sidecar-python/
+    rolling-mill-quality-sidecar-python/
   java/
     hello-world-sidecar-java/
     approval-review-sidecar-java/
     listing-health-sidecar-java/
+    furnace-energy-sidecar-java/
   dotnet/
     hello-world-sidecar-dotnet/
     listing-ops-sidecar-dotnet/
     approval-review-sidecar-dotnet/
+    work-order-risk-sidecar-dotnet/
 ```
 
 ## Which example should I start with?
@@ -94,6 +98,35 @@ examples/
 | Build a medium Java sidecar | `examples/java/listing-health-sidecar-java` | Useful domain scoring example |
 | Start with .NET | `examples/dotnet/hello-world-sidecar-dotnet` | Smallest ASP.NET Core example |
 | Build a medium .NET sidecar | `examples/dotnet/approval-review-sidecar-dotnet` | Useful approval-routing example |
+| Explore manufacturing / steel scenarios | see the manufacturing examples below | Realistic plant operations use cases |
+
+## Manufacturing-focused examples
+
+These are intentionally shaped around plant and steel-manufacturing scenarios so teams like Jindal Steel can see how Valtren AI extensions map to real work.
+
+### Node
+
+- `examples/node/steel-plant-ops-pack`
+  - in-process workflow pack for steel plant interventions
+  - good for shift-supervisor and approval-gated intervention loops
+
+### Python
+
+- `examples/python/rolling-mill-quality-sidecar-python`
+  - sidecar for rolling-mill quality scoring
+  - good for width/thickness drift and surface defect review
+
+### Java
+
+- `examples/java/furnace-energy-sidecar-java`
+  - sidecar for furnace energy deviation analysis
+  - good for utilities, process, or energy teams
+
+### .NET
+
+- `examples/dotnet/work-order-risk-sidecar-dotnet`
+  - sidecar for maintenance work-order risk scoring
+  - good for planning, reliability, and operations teams
 
 ## Included examples
 
@@ -120,6 +153,10 @@ examples/
   - Medium-complexity in-process extension
   - Demonstrates a governed workflow plus an approval-aware executor
 
+- `steel-plant-ops-pack`
+  - Manufacturing-focused workflow pack
+  - Demonstrates how to shape a starter agent for steel plant interventions and approvals
+
 ### Python examples
 
 - `hello-world-sidecar-python`
@@ -134,6 +171,10 @@ examples/
   - Medium-complexity Python sidecar
   - Demonstrates a domain endpoint and simple listing-health scoring
 
+- `rolling-mill-quality-sidecar-python`
+  - Manufacturing-focused Python sidecar
+  - Demonstrates steel quality scoring with tolerance-style inputs
+
 ### Java examples
 
 - `hello-world-sidecar-java`
@@ -145,6 +186,10 @@ examples/
 - `listing-health-sidecar-java`
   - Medium Java sidecar for scoring or QA-style listing analysis
 
+- `furnace-energy-sidecar-java`
+  - Manufacturing-focused Java sidecar
+  - Demonstrates energy deviation analysis for furnace-style operations
+
 ### .NET examples
 
 - `hello-world-sidecar-dotnet`
@@ -155,6 +200,10 @@ examples/
 
 - `approval-review-sidecar-dotnet`
   - Medium .NET sidecar for approval-routing decisions
+
+- `work-order-risk-sidecar-dotnet`
+  - Manufacturing-focused .NET sidecar
+  - Demonstrates maintenance work-order risk scoring
 
 ## How these examples fit into Valtren AI
 
@@ -230,7 +279,8 @@ Typical flow:
 3. Move to `examples/node/catalog-only-agent-pack`
 4. Then study `examples/node/executor-pack-node`
 5. Review `examples/node/approval-gate-pack`
-6. Move into Python, Java, or .NET sidecars for domain-specific logic
+6. Explore the manufacturing examples if your domain is plant operations, quality, maintenance, or energy
+7. Move into Python, Java, or .NET sidecars for domain-specific logic
 
 ## Guides
 
