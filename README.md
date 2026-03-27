@@ -1,5 +1,8 @@
 # Valtren AI Extension Examples
 
+[![npm version](https://img.shields.io/npm/v/%40valtren-ai%2Fextension-sdk)](https://www.npmjs.com/package/@valtren-ai/extension-sdk)
+[![Publish SDK](https://github.com/valtren-ai/extension-sdk/actions/workflows/publish.yml/badge.svg)](https://github.com/valtren-ai/extension-sdk/actions/workflows/publish.yml)
+
 Official sample extensions for Valtren AI, from hello world to advanced domain packs.
 
 Published SDK:
