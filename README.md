@@ -65,21 +65,25 @@ examples/
     executor-pack-node/
     approval-gate-pack/
     steel-plant-ops-pack/
+    digital-lending-ops-pack/
   python/
     hello-world-sidecar-python/
     org-hello-world-zip-python/
     listing-audit-sidecar-python/
     rolling-mill-quality-sidecar-python/
+    loan-portfolio-risk-sidecar-python/
   java/
     hello-world-sidecar-java/
     approval-review-sidecar-java/
     listing-health-sidecar-java/
     furnace-energy-sidecar-java/
+    collections-strategy-sidecar-java/
   dotnet/
     hello-world-sidecar-dotnet/
     listing-ops-sidecar-dotnet/
     approval-review-sidecar-dotnet/
     work-order-risk-sidecar-dotnet/
+    borrower-eligibility-sidecar-dotnet/
 ```
 
 ## Which example should I start with?
@@ -99,6 +103,7 @@ examples/
 | Start with .NET | `examples/dotnet/hello-world-sidecar-dotnet` | Smallest ASP.NET Core example |
 | Build a medium .NET sidecar | `examples/dotnet/approval-review-sidecar-dotnet` | Useful approval-routing example |
 | Explore manufacturing / steel scenarios | see the manufacturing examples below | Realistic plant operations use cases |
+| Explore micro-finance / digital lending scenarios | see the micro-finance examples below | Borrower risk, collections, and eligibility use cases |
 
 ## Manufacturing-focused examples
 
@@ -127,6 +132,35 @@ These are intentionally shaped around plant and steel-manufacturing scenarios so
 - `examples/dotnet/work-order-risk-sidecar-dotnet`
   - sidecar for maintenance work-order risk scoring
   - good for planning, reliability, and operations teams
+
+
+## Micro-finance-focused examples
+
+These are intentionally shaped around digital lending, borrower operations, and financial-inclusion scenarios so teams like Yabx or Furaha Financials can see how Valtren AI extensions map to real work.
+
+### Node
+
+- `examples/node/digital-lending-ops-pack`
+  - workflow pack for borrower review and intervention approvals
+  - good for servicing, portfolio-risk, and collections-adjacent orchestration
+
+### Python
+
+- `examples/python/loan-portfolio-risk-sidecar-python`
+  - sidecar for delinquency and utilization-based borrower risk scoring
+  - good for portfolio monitoring and early collections prioritization
+
+### Java
+
+- `examples/java/collections-strategy-sidecar-java`
+  - sidecar for routing borrowers into collections strategy lanes
+  - good for servicing and collections operations
+
+### .NET
+
+- `examples/dotnet/borrower-eligibility-sidecar-dotnet`
+  - sidecar for borrower eligibility and manual-review routing
+  - good for underwriting and lending operations teams
 
 ## Included examples
 
@@ -157,6 +191,10 @@ These are intentionally shaped around plant and steel-manufacturing scenarios so
   - Manufacturing-focused workflow pack
   - Demonstrates how to shape a starter agent for steel plant interventions and approvals
 
+- `digital-lending-ops-pack`
+  - Micro-finance-focused workflow pack
+  - Demonstrates how to shape a starter agent for borrower review and intervention workflows
+
 ### Python examples
 
 - `hello-world-sidecar-python`
@@ -175,6 +213,10 @@ These are intentionally shaped around plant and steel-manufacturing scenarios so
   - Manufacturing-focused Python sidecar
   - Demonstrates steel quality scoring with tolerance-style inputs
 
+- `loan-portfolio-risk-sidecar-python`
+  - Micro-finance-focused Python sidecar
+  - Demonstrates borrower and portfolio risk scoring
+
 ### Java examples
 
 - `hello-world-sidecar-java`
@@ -190,6 +232,10 @@ These are intentionally shaped around plant and steel-manufacturing scenarios so
   - Manufacturing-focused Java sidecar
   - Demonstrates energy deviation analysis for furnace-style operations
 
+- `collections-strategy-sidecar-java`
+  - Micro-finance-focused Java sidecar
+  - Demonstrates collections strategy routing
+
 ### .NET examples
 
 - `hello-world-sidecar-dotnet`
@@ -204,6 +250,10 @@ These are intentionally shaped around plant and steel-manufacturing scenarios so
 - `work-order-risk-sidecar-dotnet`
   - Manufacturing-focused .NET sidecar
   - Demonstrates maintenance work-order risk scoring
+
+- `borrower-eligibility-sidecar-dotnet`
+  - Micro-finance-focused .NET sidecar
+  - Demonstrates borrower eligibility checks
 
 ## How these examples fit into Valtren AI
 
@@ -285,7 +335,9 @@ Typical flow:
 ## Guides
 
 - [Build your first extension](./docs/build-your-first-extension.md)
+- [Commerce extension playbook](./docs/commerce-playbook.md)
 - [Manufacturing extension playbook](./docs/manufacturing-playbook.md)
+- [Micro-finance extension playbook](./docs/microfinance-playbook.md)
 
 ## Related repositories
 
