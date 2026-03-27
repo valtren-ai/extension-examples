@@ -61,6 +61,7 @@ examples/
   node/
     hello-world-node/
     org-hello-world-zip-node/
+    org-credit-ops-zip-node/
     catalog-only-agent-pack/
     executor-pack-node/
     approval-gate-pack/
@@ -69,6 +70,7 @@ examples/
   python/
     hello-world-sidecar-python/
     org-hello-world-zip-python/
+    org-collections-zip-python/
     listing-audit-sidecar-python/
     rolling-mill-quality-sidecar-python/
     loan-portfolio-risk-sidecar-python/
@@ -92,7 +94,9 @@ examples/
 | --- | --- | --- |
 | Build your first Valtren extension ever | `examples/node/hello-world-node` | Smallest in-process example |
 | Upload a Node extension from Org Settings | `examples/node/org-hello-world-zip-node` | Best first org ZIP Node example |
+| Start a banking or credit-ops Node proof of concept | `examples/node/org-credit-ops-zip-node` | Customer-owned org ZIP for credit review flows |
 | Upload a Python extension from Org Settings | `examples/python/org-hello-world-zip-python` | Best first org ZIP Python example |
+| Start a collections-focused Python proof of concept | `examples/python/org-collections-zip-python` | Customer-owned org ZIP for simple collections routing |
 | Add workflows and templates only | `examples/node/catalog-only-agent-pack` | No executor complexity yet |
 | Add a Node step executor | `examples/node/executor-pack-node` | Best runtime execution example |
 | Learn a medium Node pack | `examples/node/approval-gate-pack` | Shows governed workflow behavior |
@@ -134,6 +138,22 @@ These are intentionally shaped around plant and steel-manufacturing scenarios so
   - good for planning, reliability, and operations teams
 
 
+## Banking / collections-focused examples
+
+These are intentionally shaped around credit operations, collections, and servicing workflows so banks, lenders, and embedded-finance teams can see how Valtren AI extensions map to real work.
+
+### Node
+
+- `examples/node/org-credit-ops-zip-node`
+  - org ZIP example for borrower review and servicing recommendations
+  - good for bank or lender-owned proof-of-concept workflows
+
+### Python
+
+- `examples/python/org-collections-zip-python`
+  - org ZIP example for collections lane routing
+  - good for servicing and recovery teams
+
 ## Micro-finance-focused examples
 
 These are intentionally shaped around digital lending, borrower operations, and financial-inclusion scenarios so teams like Yabx or Furaha Financials can see how Valtren AI extensions map to real work.
@@ -174,6 +194,10 @@ These are intentionally shaped around digital lending, borrower operations, and 
   - Minimal Node example shaped for `Admin -> Org Settings -> Extensions -> Upload ZIP`
   - Demonstrates the org-owned ZIP upload path for Node
 
+- `org-credit-ops-zip-node`
+  - Banking-focused Node org ZIP example
+  - Demonstrates a customer-owned credit-review proof of concept
+
 - `catalog-only-agent-pack`
   - Demonstrates `agent_catalog`
   - Adds custom steps, workflows, and starter templates
@@ -204,6 +228,10 @@ These are intentionally shaped around digital lending, borrower operations, and 
 - `org-hello-world-zip-python`
   - Minimal Python example shaped for org ZIP upload
   - Best first example for org-level Python enablement
+
+- `org-collections-zip-python`
+  - Banking-focused Python org ZIP example
+  - Demonstrates simple collections routing for customer-owned proof-of-concept flows
 
 - `listing-audit-sidecar-python`
   - Medium-complexity Python sidecar
@@ -336,6 +364,7 @@ Typical flow:
 
 - [Build your first extension](./docs/build-your-first-extension.md)
 - [Commerce extension playbook](./docs/commerce-playbook.md)
+- [Banking, collections, and credit operations playbook](./docs/banking-playbook.md)
 - [Manufacturing extension playbook](./docs/manufacturing-playbook.md)
 - [Micro-finance extension playbook](./docs/microfinance-playbook.md)
 
