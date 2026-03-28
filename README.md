@@ -7,7 +7,13 @@ Official sample extensions for Valtren AI, from hello world to medium-complexity
 
 Published SDK:
 
-- [`@valtren-ai/extension-sdk@0.1.0`](https://www.npmjs.com/package/@valtren-ai/extension-sdk)
+- [`@valtren-ai/extension-sdk@0.2.0`](https://www.npmjs.com/package/@valtren-ai/extension-sdk)
+
+Quick scaffold example:
+
+```bash
+npx @valtren-ai/extension-sdk create-valtren-extension my-extension --runtime node-pack
+```
 
 ## Why this repo exists
 
@@ -374,7 +380,7 @@ Extensions contribute:
 For SDK-backed Node examples, install the shared package first:
 
 ```bash
-npm install @valtren-ai/extension-sdk@^0.1.0
+npm install @valtren-ai/extension-sdk@^0.2.0
 ```
 
 The package is live on npm:

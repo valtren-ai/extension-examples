@@ -37,7 +37,7 @@ Use one of the examples in this repository:
 For a Node extension:
 
 ```bash
-npm install @valtren-ai/extension-sdk@^0.1.0
+npm install @valtren-ai/extension-sdk@^0.2.0
 ```
 
 The SDK is published on npm here:
