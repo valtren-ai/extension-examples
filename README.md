@@ -443,6 +443,7 @@ Typical flow:
 ## Guides
 
 - [Build your first extension](./docs/build-your-first-extension.md)
+- [Release policy](./docs/release-policy.md)
 - [Versioning and upgrade guide](./docs/versioning-and-upgrade-guide.md)
 - [Testing and smoke-checks guide](./docs/testing-and-smoke-checks-guide.md)
 - [Security and capability review guide](./docs/security-and-capability-review-guide.md)
@@ -460,6 +461,11 @@ Typical flow:
 
 - `valtren-ai/extension-sdk`
   - Shared types, validators, and helpers for extension authors
+
+## Support
+
+- Report issues: [GitHub Issues](https://github.com/valtren-ai/extension-examples/issues)
+- Request new examples: [GitHub Issues](https://github.com/valtren-ai/extension-examples/issues/new/choose)
 
 ## License
 
