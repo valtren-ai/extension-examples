@@ -443,6 +443,7 @@ Typical flow:
 ## Guides
 
 - [Build your first extension](./docs/build-your-first-extension.md)
+- [Create a custom extension in VS Code](./docs/create-custom-extension-in-vscode.md)
 - [Release policy](./docs/release-policy.md)
 - [Versioning and upgrade guide](./docs/versioning-and-upgrade-guide.md)
 - [Testing and smoke-checks guide](./docs/testing-and-smoke-checks-guide.md)
