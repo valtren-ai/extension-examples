@@ -12,6 +12,16 @@ It is written for teams such as:
 
 ## Which runtime should I choose?
 
+## Architecture pattern
+
+```mermaid
+flowchart LR
+  A["Partner system events"] --> B["Valtren workflow or sidecar"]
+  B --> C["Ops review or auto-routing"]
+  C --> D["Recovery action"]
+  D --> E["Connector health verification"]
+```
+
 ### Choose a Node pack when
 
 Use an in-process Node extension when the value is mostly:

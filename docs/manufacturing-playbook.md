@@ -23,6 +23,16 @@ Use the guidance below.
 
 ## Which runtime should I choose?
 
+## Architecture pattern
+
+```mermaid
+flowchart LR
+  A["Plant signals"] --> B["Valtren workflow or sidecar"]
+  B --> C["Supervisor review"]
+  C --> D["Operational intervention"]
+  D --> E["Outcome verification"]
+```
+
 ### Choose a Node pack when
 
 Use an in-process Node extension when you want to extend Valtren AI itself with:
