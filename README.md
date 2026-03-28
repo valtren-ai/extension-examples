@@ -63,6 +63,7 @@ examples/
     org-hello-world-zip-node/
     org-credit-ops-zip-node/
     org-claims-triage-zip-node/
+    payment-gateway-reconciliation-pack/
     catalog-only-agent-pack/
     executor-pack-node/
     approval-gate-pack/
@@ -73,6 +74,7 @@ examples/
     org-hello-world-zip-python/
     org-collections-zip-python/
     org-telecom-retention-zip-python/
+    bank-connector-health-sidecar-python/
     listing-audit-sidecar-python/
     rolling-mill-quality-sidecar-python/
     loan-portfolio-risk-sidecar-python/
@@ -110,8 +112,33 @@ examples/
 | Build a medium Java sidecar | `examples/java/listing-health-sidecar-java` | Useful domain scoring example |
 | Start with .NET | `examples/dotnet/hello-world-sidecar-dotnet` | Smallest ASP.NET Core example |
 | Build a medium .NET sidecar | `examples/dotnet/approval-review-sidecar-dotnet` | Useful approval-routing example |
+| Start a payment or partner integration workflow | `examples/node/payment-gateway-reconciliation-pack` | Good first Node pack for reconciliation and exception routing |
+| Start a connector-health sidecar | `examples/python/bank-connector-health-sidecar-python` | Good first Python sidecar for partner health scoring |
+| Start a carrier or partner API ops sidecar | `examples/dotnet/carrier-api-ops-sidecar-dotnet` | Good first .NET sidecar for external API operations |
 | Explore manufacturing / steel scenarios | see the manufacturing examples below | Realistic plant operations use cases |
 | Explore micro-finance / digital lending scenarios | see the micro-finance examples below | Borrower risk, collections, and eligibility use cases |
+
+## Partner integration-focused examples
+
+These are intentionally shaped around external-system operations so teams can see how Valtren AI extensions support reconciliation, connector health, and partner API reliability work.
+
+### Node
+
+- `examples/node/payment-gateway-reconciliation-pack`
+  - workflow pack for payment gateway reconciliation and exception handling
+  - good for payment operations and settlement review
+
+### Python
+
+- `examples/python/bank-connector-health-sidecar-python`
+  - sidecar for connector health scoring and degradation review
+  - good for bank, gateway, and partner API reliability teams
+
+### .NET
+
+- `examples/dotnet/carrier-api-ops-sidecar-dotnet`
+  - sidecar for carrier or partner API routing and escalation
+  - good for telecom or logistics integration teams
 
 ## Manufacturing-focused examples
 
@@ -235,6 +262,10 @@ These are intentionally shaped around digital lending, borrower operations, and 
   - Medium-complexity in-process extension
   - Demonstrates a governed workflow plus an approval-aware executor
 
+- `payment-gateway-reconciliation-pack`
+  - Partner integration-focused Node pack
+  - Demonstrates reconciliation workflows and next-step preparation
+
 - `steel-plant-ops-pack`
   - Manufacturing-focused workflow pack
   - Demonstrates how to shape a starter agent for steel plant interventions and approvals
@@ -273,6 +304,10 @@ These are intentionally shaped around digital lending, borrower operations, and 
   - Micro-finance-focused Python sidecar
   - Demonstrates borrower and portfolio risk scoring
 
+- `bank-connector-health-sidecar-python`
+  - Partner integration-focused Python sidecar
+  - Demonstrates connector health scoring and degradation analysis
+
 ### Java examples
 
 - `hello-world-sidecar-java`
@@ -310,6 +345,10 @@ These are intentionally shaped around digital lending, borrower operations, and 
 - `borrower-eligibility-sidecar-dotnet`
   - Micro-finance-focused .NET sidecar
   - Demonstrates borrower eligibility checks
+
+- `carrier-api-ops-sidecar-dotnet`
+  - Partner integration-focused .NET sidecar
+  - Demonstrates carrier or partner API operations routing
 
 ## How these examples fit into Valtren AI
 
@@ -393,6 +432,7 @@ Typical flow:
 - [Build your first extension](./docs/build-your-first-extension.md)
 - [Commerce extension playbook](./docs/commerce-playbook.md)
 - [Banking, collections, and credit operations playbook](./docs/banking-playbook.md)
+- [Partner integration playbook](./docs/partner-integration-playbook.md)
 - [Manufacturing extension playbook](./docs/manufacturing-playbook.md)
 - [Micro-finance extension playbook](./docs/microfinance-playbook.md)
 
