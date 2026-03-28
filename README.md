@@ -431,6 +431,8 @@ Typical flow:
 
 - [Build your first extension](./docs/build-your-first-extension.md)
 - [Versioning and upgrade guide](./docs/versioning-and-upgrade-guide.md)
+- [Testing and smoke-checks guide](./docs/testing-and-smoke-checks-guide.md)
+- [Security and capability review guide](./docs/security-and-capability-review-guide.md)
 - [Commerce extension playbook](./docs/commerce-playbook.md)
 - [Banking, collections, and credit operations playbook](./docs/banking-playbook.md)
 - [Partner integration playbook](./docs/partner-integration-playbook.md)
