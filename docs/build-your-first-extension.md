@@ -32,17 +32,30 @@ Use one of the examples in this repository:
 - `examples/python/org-hello-world-zip-python`
 - `examples/python/hello-world-sidecar-python`
 
-## Step 3: install the SDK
+## Step 3: install or use the scaffold CLI
 
-For a Node extension:
+Fastest path:
+
+```bash
+npx create-valtren-extension my-extension --runtime node-pack
+```
+
+You can also use the SDK package directly:
+
+```bash
+npx @valtren-ai/extension-sdk create-valtren-extension my-extension --runtime node-pack
+```
+
+If you want the library and validator helpers in a Node extension:
 
 ```bash
 npm install @valtren-ai/extension-sdk@^0.2.0
 ```
 
-The SDK is published on npm here:
+Published packages:
 
 - [npmjs.com/package/@valtren-ai/extension-sdk](https://www.npmjs.com/package/@valtren-ai/extension-sdk)
+- [npmjs.com/package/create-valtren-extension](https://www.npmjs.com/package/create-valtren-extension)
 
 ## Step 4: define your extension manifest
 

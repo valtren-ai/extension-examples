@@ -8,8 +8,15 @@ Official sample extensions for Valtren AI, from hello world to medium-complexity
 Published SDK:
 
 - [`@valtren-ai/extension-sdk@0.2.0`](https://www.npmjs.com/package/@valtren-ai/extension-sdk)
+- [`create-valtren-extension@0.1.0`](https://www.npmjs.com/package/create-valtren-extension)
 
 Quick scaffold example:
+
+```bash
+npx create-valtren-extension my-extension --runtime node-pack
+```
+
+Direct SDK-package equivalent:
 
 ```bash
 npx @valtren-ai/extension-sdk create-valtren-extension my-extension --runtime node-pack
