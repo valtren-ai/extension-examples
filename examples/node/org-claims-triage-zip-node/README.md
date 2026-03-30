@@ -5,8 +5,8 @@ Minimal Node org ZIP extension for insurance claims triage teams.
 ## What it demonstrates
 
 - `index.js` at ZIP root
-- `/health` route for Valtren smoke test
-- `/claims/triage` endpoint for simple claims-review recommendations
+- `/api/ext/org-claims-triage-zip-node/health` route for Valtren smoke test
+- `/api/ext/org-claims-triage-zip-node/claims/triage` endpoint for simple claims-review recommendations
 
 ## Best for
 

@@ -1,10 +1,10 @@
-export default async function register(app) {
-  app.get('/health', async () => ({
+export default async function register({ app }) {
+  app.get('/api/ext/org-credit-ops-zip-node/health', async () => ({
     ok: true,
     service: 'org-credit-ops-zip-node',
   }));
 
-  app.post('/credit/review', async (request) => {
+  app.post('/api/ext/org-credit-ops-zip-node/credit/review', async (request) => {
     const body = request.body || {};
     const dpd = Number(body.daysPastDue || 0);
     const exposure = Number(body.exposureAmount || 0);

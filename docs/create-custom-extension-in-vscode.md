@@ -106,8 +106,8 @@ Look for:
 Look for:
 
 - `app.py` or `main.py`
-- `/health`
-- a simple domain endpoint like `/ping`
+- a namespaced health route like `/api/ext/<stable-extension-key>/health`
+- a simple namespaced domain endpoint like `/api/ext/<stable-extension-key>/ping`
 
 ### If you chose `node-pack`
 
@@ -122,7 +122,7 @@ Before testing, change something obvious so you can confirm your version is runn
 
 Good examples:
 
-- change the message returned by `/ping`
+- change the message returned by the namespaced `/ping` route
 - rename a workflow title
 - add one more output field
 - change the displayed extension name

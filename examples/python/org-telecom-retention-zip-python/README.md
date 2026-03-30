@@ -5,8 +5,8 @@ Minimal Python org ZIP extension for telecom retention and renewal teams.
 ## What it demonstrates
 
 - `app.py` at ZIP root
-- `/health` route for Valtren smoke test
-- `/retention/review` endpoint for simple churn-retention routing
+- `/api/ext/org-telecom-retention-zip-python/health` route for Valtren smoke test
+- `/api/ext/org-telecom-retention-zip-python/retention/review` endpoint for simple churn-retention routing
 
 ## Best for
 

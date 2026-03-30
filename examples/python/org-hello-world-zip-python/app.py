@@ -17,7 +17,7 @@ def require_token(headers: dict):
         raise HTTPException(status_code=401, detail="Missing or invalid sidecar token")
 
 
-@app.get("/health")
+@app.get("/api/ext/org-hello-world-zip-python/health")
 def health(x_valtren_extension_token: str | None = Header(default=None)):
     require_token({TOKEN_HEADER.lower(): x_valtren_extension_token or ""})
     return {
@@ -27,7 +27,7 @@ def health(x_valtren_extension_token: str | None = Header(default=None)):
     }
 
 
-@app.get("/ping")
+@app.get("/api/ext/org-hello-world-zip-python/ping")
 def ping(x_valtren_extension_token: str | None = Header(default=None)):
     require_token({TOKEN_HEADER.lower(): x_valtren_extension_token or ""})
     return {
