@@ -430,6 +430,32 @@ Typical flow:
 3. expose one or more domain endpoints
 4. register or connect it through Valtren sidecar runtime configuration
 
+## Org ZIP route convention
+
+For org-uploaded ZIP extensions, use stable namespaced public routes:
+
+- `/api/ext/<stable-extension-key>/health`
+- `/api/ext/<stable-extension-key>/...`
+
+Guidelines:
+
+- use a stable extension key in the API path
+- do not use changing version-like suffixes in the public route contract
+- do not rely on implicit auto-prefixing
+- keep smoke routes namespaced under the extension key
+
+Examples:
+
+- `examples/node/org-hello-world-zip-node`
+  - `/api/ext/org-hello-world-zip-node/health`
+  - `/api/ext/org-hello-world-zip-node/ping`
+- `examples/python/org-hello-world-zip-python`
+  - `/api/ext/org-hello-world-zip-python/health`
+  - `/api/ext/org-hello-world-zip-python/ping`
+- `examples/node/org-credit-ops-zip-node`
+  - `/api/ext/org-credit-ops-zip-node/health`
+  - `/api/ext/org-credit-ops-zip-node/credit/review`
+
 ## Recommended learning path
 
 1. Start with `examples/node/hello-world-node`

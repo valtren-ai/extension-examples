@@ -12,12 +12,12 @@ class CollectionsReviewRequest(BaseModel):
     missed_promises_to_pay: int = 0
 
 
-@app.get('/health')
+@app.get('/api/ext/org-collections-zip-python/health')
 def health():
     return {"ok": True, "service": "org-collections-zip-python"}
 
 
-@app.post('/collections/review')
+@app.post('/api/ext/org-collections-zip-python/collections/review')
 def review(request: CollectionsReviewRequest):
     if request.days_past_due >= 30 or request.missed_promises_to_pay >= 2:
         lane = 'field-follow-up'

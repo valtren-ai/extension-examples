@@ -1,10 +1,10 @@
-export default async function register(app) {
-  app.get('/health', async () => ({
+export default async function register({ app }) {
+  app.get('/api/ext/org-claims-triage-zip-node/health', async () => ({
     ok: true,
     service: 'org-claims-triage-zip-node',
   }));
 
-  app.post('/claims/triage', async (request) => {
+  app.post('/api/ext/org-claims-triage-zip-node/claims/triage', async (request) => {
     const body = request.body || {};
     const amount = Number(body.claimAmount || 0);
     const fraudSignals = Number(body.fraudSignals || 0);

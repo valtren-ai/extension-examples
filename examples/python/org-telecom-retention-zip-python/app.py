@@ -13,12 +13,12 @@ class RetentionReviewRequest(BaseModel):
     usage_drop_percent: float = 0.0
 
 
-@app.get('/health')
+@app.get('/api/ext/org-telecom-retention-zip-python/health')
 def health():
     return {"ok": True, "service": "org-telecom-retention-zip-python"}
 
 
-@app.post('/retention/review')
+@app.post('/api/ext/org-telecom-retention-zip-python/retention/review')
 def review(request: RetentionReviewRequest):
     if request.recent_complaints >= 2 or request.usage_drop_percent >= 40:
         lane = 'save-desk'

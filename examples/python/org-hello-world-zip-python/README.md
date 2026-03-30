@@ -8,8 +8,8 @@ This sample is intentionally simple:
 
 - `app.py` is at the ZIP root
 - `requirements.txt` is at the ZIP root
-- it exposes `/health` for Valtren's org extension smoke test
-- it exposes `/ping` as a tiny domain endpoint
+- it exposes `/api/ext/org-hello-world-zip-python/health` for Valtren's org extension smoke test
+- it exposes `/api/ext/org-hello-world-zip-python/ping` as a tiny domain endpoint
 
 This is the best first example for testing:
 
@@ -44,4 +44,15 @@ After upload and enablement:
 
 - install status should show `active`
 - health should show `healthy`
-- `Test extension` should call `/health`
+- `Test extension` should call `/api/ext/org-hello-world-zip-python/health`
+
+## Route convention
+
+Org ZIP extensions should expose stable public routes under:
+
+- `/api/ext/<stable-extension-key>/...`
+
+For this example:
+
+- `/api/ext/org-hello-world-zip-python/health`
+- `/api/ext/org-hello-world-zip-python/ping`

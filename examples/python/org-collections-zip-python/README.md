@@ -5,8 +5,8 @@ Minimal Python org ZIP extension for collections and recovery teams.
 ## What it demonstrates
 
 - `app.py` at ZIP root
-- `/health` route for Valtren smoke test
-- `/collections/review` endpoint for simple collections-lane routing
+- `/api/ext/org-collections-zip-python/health` route for Valtren smoke test
+- `/api/ext/org-collections-zip-python/collections/review` endpoint for simple collections-lane routing
 
 ## Best for
 

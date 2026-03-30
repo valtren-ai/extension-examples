@@ -78,6 +78,7 @@ In Valtren AI:
 - the package passes validation
 - the extension becomes `active` and `healthy`
 - the smoke test returns `ok: true`
+- org ZIP smoke routes stay namespaced under `/api/ext/<stable-extension-key>/...`
 - disable and re-enable works cleanly
 
 ## 3. Python sidecar checks
